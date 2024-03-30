@@ -20,19 +20,19 @@ class App extends Component {
     this.ctrlHEventHandler = this.ctrlHEventHandler.bind(this);
     this.handleDisplayDrawer = this.handleDisplayDrawer.bind(this);
     this.handleHideDrawer = this.handleHideDrawer.bind(this);
-  };
+  }
 
   handleDisplayDrawer() {
     this.setState({
       displayDrawer: true,
     });
-  };
+  }
 
   handleHideDrawer() {
     this.setState({
       displayDrawer: false,
     });
-  };
+  }
 
   ctrlHEventHandler(e) {
     let k = e.key;
@@ -41,19 +41,19 @@ class App extends Component {
       alert('Logging you out');
       this.props.logOut();
     }
-  };
+  }
 
   handleKeyPressDown() {
     document.addEventListener("keydown", this.ctrlHEventHandler, false);
-  };
+  }
 
   componentDidMount() {
     this.handleKeyPressDown();
-  };
+  }
 
   componentWillUnmount() {
     document.removeEventListener("keydown", this.ctrlHEventHandler, false);
-  };
+  }
 
   render() {
 
@@ -136,8 +136,8 @@ class App extends Component {
         </div>
       </Fragment>
     );  
-  };
-};
+  }
+}
 
 const styles = StyleSheet.create({
   app: {

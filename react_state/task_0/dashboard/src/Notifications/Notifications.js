@@ -26,7 +26,7 @@ class Notifications extends Component {
 	};
 
 	render() {
-		let {
+		const {
 			displayDrawer,
 			listNotifications,
 			handleDisplayDrawer,
@@ -59,8 +59,7 @@ class Notifications extends Component {
 							}}
 							aria-label="Close"
 							onClick={(e) => {
-								// console.log('Close button has been clicked');
-								handleHideDrawer()
+								handleHideDrawer();
 							}}
 						>
 							<img
@@ -150,7 +149,7 @@ const styles = StyleSheet.create({
 	menuItem: {
 		textAlign: 'right',
 		fontWeight: 'bold',
-		pointer: 'cursor',
+		cursor: 'pointer',
 		background: '#fff8f8',
 		':hover': {
 			animationName: [opacityFrame, bounceFrame],
@@ -160,19 +159,16 @@ const styles = StyleSheet.create({
 	},
 });
 
-
 Notifications.propTypes = {
-	displayDrawer: PropTypes.bool,
+	displayDrawer: PropTypes.bool.isRequired,
 	listNotifications: PropTypes.arrayOf(NotificationItemShape),
-	displayDrawer: PropTypes.bool,
-	handleDisplayDrawer: PropTypes.func,
-	handleHideDrawer: PropTypes.func,
+	handleDisplayDrawer: PropTypes.func.isRequired,
+	handleHideDrawer: PropTypes.func.isRequired,
 };
 
 Notifications.defaultProps = {
 	displayDrawer: false,
 	listNotifications: [],
-	displayDrawer: false,
 };
 
 export default Notifications;
