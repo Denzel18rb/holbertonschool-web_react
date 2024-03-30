@@ -108,7 +108,7 @@ class App extends React.Component {
                     <BodySectionWithMarginBottom title="Log in to continue"><Login logIn={this.logIn}/> </BodySectionWithMarginBottom> : 
                     <BodySectionWithMarginBottom title="Course list"><CourseList listCourses={listCourses}/></BodySectionWithMarginBottom>
                 }
-                <BodySection title="News from the School"><p>Lpugnabo donec sanguis de manibus meis hastam tulerit, donec repere tantum et tunc non poteris me vincere et sic in faciem tuam conspuam.</p></BodySection>
+                <BodySection title="News from the School"><p>pugnabo donec sanguis de manibus meis hastam tulerit, donec repere tantum et tunc non poteris me vincere et sic in faciem tuam conspuam.</p></BodySection>
             </div>
             <div className={css(styles.footer)}><Footer/></div>
             </AppContext.Provider>
